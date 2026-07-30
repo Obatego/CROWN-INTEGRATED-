@@ -1,219 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Yolanda Services</title>
-  <style>
-    /* Reset & Base Dark Theme */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yolanda Services — Modern Digital Solutions</title>
+  <meta name="description" content="Empowering businesses through high-impact digital solutions, custom strategies, and scalable web design.">
 
-    body {
-      background-color: #0b0b0f;
-      color: #f3f4f6;
-      line-height: 1.6;
-      padding: 20px;
-    }
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/animations.css">
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* Navigation Bar */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      margin-bottom: 30px;
-    }
-
-    .logo {
-      font-weight: 800;
-      font-size: 1.1rem;
-      letter-spacing: 1px;
-      color: #ffffff;
-      text-transform: uppercase;
-    }
-
-    nav {
-      display: flex;
-      gap: 15px;
-      align-items: center;
-    }
-
-    nav a {
-      color: #a1a1aa;
-      font-size: 0.9rem;
-      transition: color 0.2s;
-    }
-
-    nav a:hover {
-      color: #ff2d85;
-    }
-
-    .btn-small {
-      background: #ff2d85;
-      color: #fff !important;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-weight: 600;
-      font-size: 0.85rem;
-    }
-
-    /* Hero Section */
-    .hero {
-      max-width: 650px;
-      margin: 0 auto;
-      text-align: left;
-    }
-
-    .badge {
-      display: inline-block;
-      background: rgba(255, 45, 133, 0.15);
-      color: #ff2d85;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      margin-bottom: 15px;
-      text-transform: uppercase;
-      border: 1px solid rgba(255, 45, 133, 0.3);
-    }
-
-    .hero-title {
-      font-size: 2.4rem;
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 15px;
-      background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero-desc {
-      color: #a1a1aa;
-      font-size: 1rem;
-      margin-bottom: 25px;
-    }
-
-    /* Action Buttons */
-    .btn-group {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 30px;
-    }
-
-    .btn-primary {
-      background: #ff2d85;
-      color: #fff;
-      padding: 12px 24px;
-      border-radius: 30px;
-      font-weight: 600;
-      box-shadow: 0 4px 15px rgba(255, 45, 133, 0.4);
-    }
-
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: #fff;
-      padding: 12px 24px;
-      border-radius: 30px;
-      font-weight: 600;
-    }
-
-    /* Status Bar */
-    .status-bar {
-      display: flex;
-      gap: 15px;
-      background: rgba(255, 255, 255, 0.03);
-      padding: 10px 16px;
-      border-radius: 8px;
-      font-size: 0.8rem;
-      color: #a1a1aa;
-      margin-bottom: 40px;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .status-bar span {
-      color: #22c55e;
-      font-weight: 600;
-    }
-
-    /* Stats Grid */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .stat-card h3 {
-      font-size: 1.8rem;
-      color: #ff2d85;
-      font-weight: 800;
-    }
-
-    .stat-card p {
-      font-size: 0.85rem;
-      color: #a1a1aa;
-    }
-  </style>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png">
 </head>
-<body>
+<body class="dark-mode">
 
-  <!-- Navigation Header -->
-  <header>
-    <div class="logo">Yolanda Services</div>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact" class="btn-small">Get Started</a>
-    </nav>
+  <!-- Optional Page Loader -->
+  <div id="loader" class="loader-overlay">
+    <img src="images/logo.png" alt="Yolanda Services Logo" class="loader-logo">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Global Header & Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="images/logo.png" alt="Yolanda Services Logo" class="logo-img">
+        <span class="logo-text">Yolanda</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="login.html" class="nav-link btn-secondary-nav">Login</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <a href="contact.html" class="btn-small">Get Started</a>
+        <button class="burger-menu" id="burgerMenu" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <!-- Hero Main Content -->
-  <main class="hero">
-    <div class="badge">Welcome to Yolanda Services</div>
+  <!-- Main Content Area -->
+  <main id="main-content">
     
-    <h1 class="hero-title">Empowering Businesses Through Innovation</h1>
-    
-    <p class="hero-desc">
-      We deliver high-impact digital solutions, custom strategies, and scalable services tailored to elevate your business performance.
-    </p>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero">
+        <div class="badge">Welcome to Yolanda Services</div>
+        
+        <h1 class="hero-title">Empowering Businesses Through Innovation</h1>
+        
+        <p class="hero-desc">
+          We deliver high-impact digital solutions, custom strategies, and scalable services tailored to elevate your business performance and engage a modern audience.
+        </p>
 
-    <div class="btn-group">
-      <a href="#services" class="btn-primary">Explore Services</a>
-      <a href="#contact" class="btn-secondary">Contact Us</a>
-    </div>
+        <div class="btn-group">
+          <a href="services.html" class="btn-primary">Explore Services</a>
+          <a href="contact.html" class="btn-secondary">Contact Us</a>
+        </div>
 
-    <!-- Live Status Indicators -->
-    <div class="status-bar">
-      <div>Growth Rate: <span>+124.8%</span></div>
-      <div>System Status: <span>Active</span></div>
-    </div>
+        <!-- Live Status Indicators -->
+        <div class="status-bar">
+          <div>Growth Rate: <span class="status-active">+124.8%</span></div>
+          <div>System Status: <span class="status-active">Active</span></div>
+        </div>
 
-    <!-- Key Metrics Grid -->
-    <div class="stats-grid">
-      <div class="stat-card">
-        <h3>150+</h3>
-        <p>Projects Completed</p>
+        <!-- Key Metrics Grid -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>150+</h3>
+            <p>Projects Completed</p>
+          </div>
+          <div class="stat-card">
+            <h3>99%</h3>
+            <p>Client Satisfaction</p>
+          </div>
+        </div>
       </div>
-      <div class="stat-card">
-        <h3>99%</h3>
-        <p>Client Satisfaction</p>
+    </section>
+
+    <!-- Featured Services Preview Section -->
+    <section class="services-preview section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Core Capabilities</h2>
+          <p>Built for speed, scale, and modern digital presence.</p>
+        </div>
+
+        <div class="cards-grid">
+          <div class="card">
+            <div class="card-icon">⚡</div>
+            <h3>Digital Strategy</h3>
+            <p>Data-driven roadmaps to position your brand for sustainable growth and high engagement.</p>
+            <a href="services.html" class="card-link">Learn More &rarr;</a>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🎨</div>
+            <h3>Brand & UI/UX Design</h3>
+            <p>Dark-mode ready, slick visual identities and responsive web layouts crafted for younger demographics.</p>
+            <a href="services.html" class="card-link">Learn More &rarr;</a>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🚀</div>
+            <h3>Web & App Development</h3>
+            <p>Clean code architecture optimized for speed, cross-device compatibility, and SEO performance.</p>
+            <a href="services.html" class="card-link">Learn More &rarr;</a>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="cta-banner section-padding">
+      <div class="container cta-box">
+        <h2>Ready to upgrade your digital presence?</h2>
+        <p>Let's turn your ideas into a high-performing digital platform.</p>
+        <a href="contact.html" class="btn-primary">Start Your Project</a>
+      </div>
+    </section>
+
   </main>
 
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Yolanda Logo" class="footer-logo">
+        <p>Yolanda Services — Elevating brand presence through modern code and design.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Yolanda Services. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Cursor Glow Follower -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- JavaScript Suite (Order-Preserved) -->
+  <script src="js/loader.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/animation.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

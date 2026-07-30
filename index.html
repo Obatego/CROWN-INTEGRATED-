@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yolanda Services | Home</title>
+    <meta name="description" content="Yolanda Services provides professional data collation, customer support, digital marketing, and web development.">
+    <meta property="og:title" content="Yolanda Services">
+    <meta property="og:image" content="images/logo.png">
+
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <div id="progressBar"></div>
+    <div class="cursor-glow"></div>
+
+    <div id="particles">
+        <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <!-- Splash Loader -->
+    <div id="loader">
+        <img src="images/logo.png" alt="Yolanda Services Logo" class="loader-logo">
+        <h1>YOLANDA</h1>
+        <p>SERVICES</p>
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Yolanda Services Logo"></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <button id="themeToggle" aria-label="Toggle Theme">☀️</button>
+                <button class="nav-cta" onclick="location.href='contact.html'">Get Started</button>
+                <div class="menu-btn" aria-label="Toggle Navigation">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-text">
+                <h4>WELCOME TO YOLANDA SERVICES</h4>
+                <h1>Empowering Businesses Through <span>Innovation</span></h1>
+                <p>We deliver high-impact digital solutions, custom strategies, and scalable services tailored to elevate your business performance.</p>
+                <div class="buttons">
+                    <button class="primary" onclick="location.href='services.html'">Explore Services</button>
+                    <button class="secondary" onclick="location.href='contact.html'">Contact Us</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/logo.png" alt="Yolanda Services Graphic">
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats">
+            <div>
+                <h2>150+</h2>
+                <p>Projects Completed</p>
+            </div>
+            <div>
+                <h2>99%</h2>
+                <p>Client Satisfaction</p>
+            </div>
+            <div>
+                <h2>10+</h2>
+                <p>Years Experience</p>
+            </div>
+            <div>
+                <h2>24/7</h2>
+                <p>Dedicated Support</p>
+            </div>
+        </section>
+
+        <!-- Featured Services Preview -->
+        <section class="services">
+            <h2>Our Core Offerings</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Strategic Consulting</h3>
+                    <p>Optimizing business workflows and operations through targeted insights and dynamic frameworks.</p>
+                </div>
+                <div class="card">
+                    <h3>Digital Transformation</h3>
+                    <p>Modernizing your tech stack to accelerate scale, improve security, and enhance customer reach.</p>
+                </div>
+                <div class="card">
+                    <h3>Custom Solutions</h3>
+                    <p>Tailor-made software, brand positioning, and integration packages specified for your unique operational needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <h2>What Clients Say</h2>
+            <div class="testimonial">
+                <p>"Yolanda Services completely transformed our operations. Their team delivered beyond our expectations with unmatched speed and precision."</p>
+                <h4>— Executive Director, Global Tech</h4>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to receive our latest updates and industry insights.</p>
+            <input type="email" placeholder="Enter your email">
+            <button>Subscribe</button>
+        </section>
+    </main>
+
+    <a href="https://wa.me/" class="whatsapp" target="_blank" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <button id="topBtn" aria-label="Back to Top">↑</button>
+
+    <footer>
+        <img src="images/logo.png" alt="Yolanda Services Logo">
+        <h3>YOLANDA SERVICES</h3>
+        <p>Innovative Solutions • Reliable Service • Measurable Impact</p>
+        <div class="socials">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">X</a>
+        </div>
+        <p>© 2026 Yolanda Services. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JS Links -->
+    <script src="js/loader.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

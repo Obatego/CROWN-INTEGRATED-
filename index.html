@@ -1,170 +1,468 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yolanda Services — Modern Digital Solutions</title>
-  <meta name="description" content="Empowering businesses through high-impact digital solutions, custom strategies, and scalable web design.">
 
-  <!-- External Stylesheets -->
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/home.css">
-  <link rel="stylesheet" href="./css/animations.css">
+<meta charset="UTF-8">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="./images/logo.png">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Yolanda Services | Innovative Solutions</title>
+
+<meta name="description"
+content="Yolanda Services provides professional data collation, customer support, web development, digital marketing and innovative business solutions.">
+
+<meta name="keywords"
+content="Yolanda Services, Data Collation, Customer Support, Web Development, Digital Marketing, Business Solutions">
+
+<meta name="author"
+content="Yolanda Services">
+
+<meta property="og:title"
+content="Yolanda Services">
+
+<meta property="og:description"
+content="Innovative Solutions. Reliable Service. Measurable Impact.">
+
+<meta property="og:type"
+content="website">
+
+<meta property="og:image"
+content="images/logo.png">
+
+<link rel="icon"
+href="images/logo.png">
+
+<link rel="stylesheet"
+href="style.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
 </head>
-<body class="dark-mode">
 
-  <!-- Optional Page Loader -->
-  <div id="loader" class="loader-overlay">
-    <img src="./images/logo.png" alt="Yolanda Services Logo" class="loader-logo">
-    <div class="spinner"></div>
-  </div>
+<body>
 
-  <!-- Global Header & Navigation -->
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="brand-logo">
-        <img src="./images/logo.png" alt="Yolanda Services Logo" class="logo-img">
-        <span class="logo-text">Yolanda</span>
-      </a>
+<!-- Scroll Progress -->
 
-      <nav class="nav-menu" id="navMenu">
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="services.html" class="nav-link">Services</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-        <a href="login.html" class="nav-link btn-secondary-nav">Login</a>
-      </nav>
+<div id="progressBar"></div>
 
-      <div class="nav-actions">
-        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
-        <a href="contact.html" class="btn-small">Get Started</a>
-        <button class="burger-menu" id="burgerMenu" aria-label="Open menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </div>
-  </header>
+<!-- Mouse Glow -->
 
-  <!-- Main Content Area -->
-  <main id="main-content">
-    
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="container hero">
-        <div class="badge">Welcome to Yolanda Services</div>
-        
-        <h1 class="hero-title">Empowering Businesses Through Innovation</h1>
-        
-        <p class="hero-desc">
-          We deliver high-impact digital solutions, custom strategies, and scalable services tailored to elevate your business performance and engage a modern audience.
-        </p>
+<div class="cursor-glow"></div>
 
-        <div class="btn-group">
-          <a href="services.html" class="btn-primary">Explore Services</a>
-          <a href="contact.html" class="btn-secondary">Contact Us</a>
-        </div>
+<!-- Splash Screen -->
 
-        <!-- Live Status Indicators -->
-        <div class="status-bar">
-          <div>Growth Rate: <span class="status-active">+124.8%</span></div>
-          <div>System Status: <span class="status-active">Active</span></div>
-        </div>
+<div id="loader">
 
-        <!-- Key Metrics Grid -->
-        <div class="stats-grid">
-          <div class="stat-card">
-            <h3>150+</h3>
-            <p>Projects Completed</p>
-          </div>
-          <div class="stat-card">
-            <h3>99%</h3>
-            <p>Client Satisfaction</p>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="glow"></div>
 
-    <!-- Featured Services Preview Section -->
-    <section class="services-preview section-padding">
-      <div class="container">
-        <div class="section-header">
-          <h2>Our Core Capabilities</h2>
-          <p>Built for speed, scale, and modern digital presence.</p>
-        </div>
+<img src="images/logo.png"
+class="loader-logo"
+alt="Yolanda Logo">
 
-        <div class="cards-grid">
-          <div class="card">
-            <div class="card-icon">⚡</div>
-            <h3>Digital Strategy</h3>
-            <p>Data-driven roadmaps to position your brand for sustainable growth and high engagement.</p>
-            <a href="services.html" class="card-link">Learn More &rarr;</a>
-          </div>
+<h1>YOLANDA SERVICES</h1>
 
-          <div class="card">
-            <div class="card-icon">🎨</div>
-            <h3>Brand & UI/UX Design</h3>
-            <p>Dark-mode ready, slick visual identities and responsive web layouts crafted for younger demographics.</p>
-            <a href="services.html" class="card-link">Learn More &rarr;</a>
-          </div>
+<p>
+INNOVATIVE SOLUTIONS • RELIABLE SERVICE • MEASURABLE IMPACT
+</p>
 
-          <div class="card">
-            <div class="card-icon">🚀</div>
-            <h3>Web & App Development</h3>
-            <p>Clean code architecture optimized for speed, cross-device compatibility, and SEO performance.</p>
-            <a href="services.html" class="card-link">Learn More &rarr;</a>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="loading-bar">
 
-    <!-- Call to Action Banner -->
-    <section class="cta-banner section-padding">
-      <div class="container cta-box">
-        <h2>Ready to upgrade your digital presence?</h2>
-        <p>Let's turn your ideas into a high-performing digital platform.</p>
-        <a href="contact.html" class="btn-primary">Start Your Project</a>
-      </div>
-    </section>
+<div class="loading-progress"></div>
 
-  </main>
+</div>
 
-  <!-- Global Footer -->
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <div class="footer-brand">
-        <img src="./images/logo.png" alt="Yolanda Logo" class="footer-logo">
-        <p>Yolanda Services — Elevating brand presence through modern code and design.</p>
-      </div>
-      <div class="footer-links">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="login.html">Login</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; 2026 Yolanda Services. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+</div>
 
-  <!-- Floating Cursor Glow Follower -->
-  <div class="cursor-glow" id="cursorGlow"></div>
+<!-- Background Particles -->
 
-  <!-- JavaScript Suite (Order-Preserved) -->
-  <script src="./js/loader.js"></script>
-  <script src="./js/navbar.js"></script>
-  <script src="./js/animation.js"></script>
-  <script src="./js/main.js"></script>
-</body>
-</html>
+<div id="particles">
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+<!-- Navigation -->
+
+<header>
+
+<nav>
+
+<div class="logo">
+
+<img src="images/logo.png"
+alt="Yolanda Logo">
+
+</div>
+
+<ul>
+
+<li>
+
+<a href="index.html">
+
+Home
+
+</a>
+
+</li>
+
+<li>
+
+<a href="about.html">
+
+About
+
+</a>
+
+</li>
+
+<li>
+
+<a href="services.html">
+
+Services
+
+</a>
+
+</li>
+
+<li>
+
+<a href="projects.html">
+
+Projects
+
+</a>
+
+</li>
+
+<li>
+
+<a href="contact.html">
+
+Contact
+
+</a>
+
+</li>
+
+</ul>
+
+<div class="menu-btn"
+id="menuBtn">
+
+<span></span>
+
+<span></span>
+
+<span></span>
+
+</div>
+
+<button id="themeToggle">
+
+🌙
+
+</button>
+
+</nav>
+
+</header>
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+<div class="hero-bg"></div>
+
+<div class="hero-text">
+
+<h4>
+
+WELCOME TO YOLANDA SERVICES
+
+</h4>
+
+<h1>
+
+Innovative Solutions
+
+<br>
+
+for Modern Businesses
+
+</h1>
+
+<p>
+
+We help businesses grow through professional
+data collation, customer support,
+digital marketing,
+website development,
+technology solutions,
+and business innovation.
+
+</p>
+
+<div class="buttons">
+
+<button class="primary">
+
+Explore Services
+
+</button>
+
+<button class="secondary">
+
+Learn More
+
+</button>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="images/logo.png"
+alt="Yolanda Logo">
+
+</div>
+
+</section>
+<!-- ==========================
+     Statistics Section
+========================== -->
+
+<section class="stats">
+
+<div class="stat-box">
+
+<h2>1200+</h2>
+
+<p>Happy Clients</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2>650+</h2>
+
+<p>Projects Completed</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2>98%</h2>
+
+<p>Customer Satisfaction</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2>24/7</h2>
+
+<p>Client Support</p>
+
+</div>
+
+</section>
+
+<!-- ==========================
+     About Preview
+========================== -->
+
+<section class="about-preview">
+
+<div class="about-image">
+
+<img src="images/logo.png"
+alt="Yolanda Services">
+
+</div>
+
+<div class="about-content">
+
+<h5>WHO WE ARE</h5>
+
+<h2>
+
+Building Smarter Solutions
+For Businesses
+
+</h2>
+
+<p>
+
+Yolanda Services is committed to helping businesses
+and organizations succeed through innovative digital
+solutions, excellent customer support, data management,
+technology consulting and modern business strategies.
+
+</p>
+
+<p>
+
+Our goal is to provide reliable, efficient and
+professional services that help organizations improve
+their operations and achieve measurable results.
+
+</p>
+
+<a href="about.html" class="primary">
+
+Read More
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ==========================
+     Services
+========================== -->
+
+<section class="services">
+
+<h5>OUR SERVICES</h5>
+
+<h2>
+
+What We Offer
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="icon">
+
+📊
+
+</div>
+
+<h3>
+
+Data Collation
+
+</h3>
+
+<p>
+
+Accurate data collection,
+processing,
+analysis and reporting
+for businesses and organizations.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="icon">
+
+🎧
+
+</div>
+
+<h3>
+
+Customer Support
+
+</h3>
+
+<p>
+
+Professional customer care,
+call centre support,
+live chat and customer engagement.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="icon">
+
+💻
+
+</div>
+
+<h3>
+
+Website Development
+
+</h3>
+
+<p>
+
+Modern responsive websites
+designed for businesses,
+brands and organizations.
+
+</p>
+<!-- ==========================
+     Trusted Clients
+========================== -->
+
+<section class="clients">
+
+<h5>TRUSTED BY</h5>
+
+<h2>Organizations & Businesses</h2>
+
+<div class="client-slider">
+
+<img src="images/logo.png" alt="Client Logo">
+
+<img src="images/logo.png" alt="Client Logo">
+
+<img src="images/logo.png" alt="Client Logo">
+
+<img src="images/logo.png" alt="Client Logo">
+
+<img src="images/logo.png" alt="Client Logo">
+
+</div>
+
+</section>
+
+<!-- ==========================
+     Testimonials
+========================== -->
+
+<section class="testimonials">
+
+<h5>TESTIMONIALS</h5>
+
+<h2>What Our Clients Say</h2>
+
+<div class="testimonial">
+
+<p>
+
+"

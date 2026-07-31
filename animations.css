@@ -1,92 +1,355 @@
-/* ===========================
-   ANIMATIONS & PARTICLES
-=========================== */
-#particles {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 0;
-}
+/* ==========================================
+   YOLANDA SERVICES
+   ANIMATIONS.CSS
+========================================== */
 
-#particles span {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: rgba(210, 60, 116, 0.4);
-    border-radius: 50%;
-    animation: float 15s infinite linear;
-}
+/* ==========================================
+   FADE IN
+========================================== */
 
-#particles span:nth-child(1) { top: 10%; left: 20%; animation-duration: 12s; }
-#particles span:nth-child(2) { top: 70%; left: 80%; animation-duration: 18s; }
-#particles span:nth-child(3) { top: 40%; left: 40%; animation-duration: 14s; }
-#particles span:nth-child(4) { top: 80%; left: 10%; animation-duration: 16s; }
-#particles span:nth-child(5) { top: 20%; left: 85%; animation-duration: 20s; }
-
-@keyframes float {
-    0% { transform: translateY(0) scale(1); opacity: 0; }
-    50% { opacity: 0.8; }
-    100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
-}
-
-#loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #0b0f19;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 10000;
-    transition: opacity 0.6s ease, visibility 0.6s;
-}
-
-#loader.hide {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.loader-logo {
-    width: 80px;
-    margin-bottom: 15px;
-    animation: pulse 2s infinite ease-in-out;
-}
-
-.loading-bar {
-    width: 150px;
-    height: 3px;
-    background: rgba(255, 255, 255, 0.1);
-    margin-top: 20px;
-    border-radius: 3px;
-    overflow: hidden;
-}
-
-.loading-progress {
-    width: 100%;
-    height: 100%;
-    background: var(--accent-color);
-    animation: loading 3s ease-in-out;
-}
-
-@keyframes loading {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(0); }
-}
-
-@keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.08); opacity: 0.8; }
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
+@keyframes fadeIn{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
     }
 }
+
+.fade-in{
+    animation:fadeIn 1s ease forwards;
+}
+
+/* ==========================================
+   FADE UP
+========================================== */
+
+@keyframes fadeUp{
+    0%{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.fade-up{
+    animation:fadeUp .8s ease forwards;
+}
+
+/* ==========================================
+   FADE DOWN
+========================================== */
+
+@keyframes fadeDown{
+    0%{
+        opacity:0;
+        transform:translateY(-40px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.fade-down{
+    animation:fadeDown .8s ease forwards;
+}
+
+/* ==========================================
+   FADE LEFT
+========================================== */
+
+@keyframes fadeLeft{
+    0%{
+        opacity:0;
+        transform:translateX(-40px);
+    }
+    100%{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+.fade-left{
+    animation:fadeLeft .8s ease forwards;
+}
+
+/* ==========================================
+   FADE RIGHT
+========================================== */
+
+@keyframes fadeRight{
+    0%{
+        opacity:0;
+        transform:translateX(40px);
+    }
+    100%{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+.fade-right{
+    animation:fadeRight .8s ease forwards;
+}
+
+/* ==========================================
+   FLOAT
+========================================== */
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+}
+
+.float{
+    animation:float 5s ease-in-out infinite;
+}
+
+/* ==========================================
+   PULSE
+========================================== */
+
+@keyframes pulse{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.08);
+    }
+
+}
+
+.pulse{
+    animation:pulse 2s infinite;
+}
+
+/* ==========================================
+   ROTATE
+========================================== */
+
+@keyframes rotate{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+.rotate{
+    animation:rotate 18s linear infinite;
+}
+
+/* ==========================================
+   BOUNCE
+========================================== */
+
+@keyframes bounce{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-18px);
+    }
+
+}
+
+.bounce{
+    animation:bounce 1.6s infinite;
+}
+
+/* ==========================================
+   ZOOM IN
+========================================== */
+
+@keyframes zoomIn{
+
+    0%{
+        opacity:0;
+        transform:scale(.7);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+.zoom-in{
+    animation:zoomIn .8s ease forwards;
+}
+
+/* ==========================================
+   GLOW
+========================================== */
+
+@keyframes glow{
+
+    0%,100%{
+        box-shadow:0 0 10px rgba(210,60,116,.2);
+    }
+
+    50%{
+        box-shadow:
+        0 0 20px rgba(210,60,116,.5),
+        0 0 40px rgba(210,60,116,.25);
+    }
+
+}
+
+.glow{
+    animation:glow 2s infinite;
+}
+
+/* ==========================================
+   SPIN
+========================================== */
+
+@keyframes spin{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(-360deg);
+    }
+
+}
+
+.spin{
+    animation:spin 8s linear infinite;
+}
+
+/* ==========================================
+   LOADER BAR
+========================================== */
+
+@keyframes loading{
+
+    from{
+        width:0;
+    }
+
+    to{
+        width:100%;
+    }
+
+}
+
+/* ==========================================
+   FLOATING PARTICLES
+========================================== */
+
+@keyframes floatParticle{
+
+    0%{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    50%{
+        opacity:.2;
+    }
+
+    100%{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+
+}
+
+/* ==========================================
+   SHAKE
+========================================== */
+
+@keyframes shake{
+
+    0%,100%{
+        transform:translateX(0);
+    }
+
+    20%{
+        transform:translateX(-5px);
+    }
+
+    40%{
+        transform:translateX(5px);
+    }
+
+    60%{
+        transform:translateX(-5px);
+    }
+
+    80%{
+        transform:translateX(5px);
+    }
+
+}
+
+.shake{
+    animation:shake .5s;
+}
+
+/* ==========================================
+   RIPPLE
+========================================== */
+
+@keyframes ripple{
+
+    from{
+        transform:scale(.8);
+        opacity:.6;
+    }
+
+    to{
+        transform:scale(2);
+        opacity:0;
+    }
+
+}
+
+/* ==========================================
+   REVEAL
+========================================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:all .8s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ==========================================
+   END OF FILE
+========================================== */

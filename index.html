@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yolanda Services | Excellence. Experience. Impact.</title>
+<meta name="description" content="Yolanda Services provides customer support, call center solutions, event management, catering, hospitality, sales and Espee-to-Naira exchange services.">
+
+<style>
+:root{
+  --black:#030303;
+  --black2:#080808;
+  --card:#111111;
+  --pink:#e72d82;
+  --pink2:#ff4f9f;
+  --white:#fff;
+  --muted:#a9a9a9;
+  --line:rgba(255,255,255,.09);
+  --max:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--black);
+  color:var(--white);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.65;
+  overflow-x:hidden;
+}
+body:after{
+  content:"";
+  position:fixed;
+  width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle,rgba(231,45,130,.07),transparent 68%);
+  top:-150px;right:-130px;
+  pointer-events:none;
+  z-index:-1;
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+button,input,select,textarea{font:inherit}
+.container{width:min(92%,var(--max));margin:auto}
+.section{padding:110px 0;position:relative}
+.label{
+  color:var(--pink2);font-size:.76rem;font-weight:900;
+  letter-spacing:4px;text-transform:uppercase;margin-bottom:15px
+}
+.pink{color:var(--pink2)}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
+.reveal.show{opacity:1;transform:none}
+
+/* NAVIGATION */
+header{
+  position:fixed;left:0;top:0;width:100%;z-index:1000;
+  background:rgba(3,3,3,.84);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line)
+}
+.nav{height:96px;display:flex;align-items:center;justify-content:space-between}
+.company-logo{
+  width:205px;height:82px;object-fit:contain;
+  object-position:left center;
+  transition:.35s;
+  filter:drop-shadow(0 0 15px rgba(231,45,130,.08))
+}
+.company-logo:hover{transform:scale(1.025)}
+.navlinks{display:flex;align-items:center;gap:28px;list-style:none}
+.navlinks a{font-size:.92rem;font-weight:700;color:#ddd;transition:.3s}
+.navlinks a:hover{color:var(--pink2)}
+.nav-cta{
+  padding:12px 21px;border-radius:30px;
+  background:var(--pink);color:#fff!important;
+  box-shadow:0 9px 25px rgba(231,45,130,.2)
+}
+.menu{display:none;background:none;border:0;color:#fff;font-size:29px}
+
+/* HERO */
+.hero{
+  min-height:100vh;padding-top:130px;display:flex;align-items:center;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 73% 45%,rgba(231,45,130,.16),transparent 28%),
+    radial-gradient(circle at 8% 80%,rgba(231,45,130,.07),transparent 25%),
+    var(--black)
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.03fr .97fr;gap:30px;align-items:center
+}
+.hero-copy{z-index:2}
+.hero-badge{
+  display:inline-flex;gap:9px;align-items:center;
+  padding:9px 15px;border:1px solid rgba(231,45,130,.3);
+  border-radius:30px;background:rgba(231,45,130,.06);
+  color:#ddd;font-size:.79rem;margin-bottom:24px;
+  animation:drop .8s ease both
+}
+.hero-badge i{
+  width:8px;height:8px;background:var(--pink2);border-radius:50%;
+  box-shadow:0 0 16px var(--pink2);animation:pulse 1.5s infinite
+}
+.hero h1{
+  font-size:clamp(3.4rem,7vw,6.7rem);
+  line-height:.92;letter-spacing:-5px;margin-bottom:27px;
+  animation:rise .9s .1s ease both
+}
+.hero h1 span{color:var(--pink2);text-shadow:0 0 35px rgba(231,45,130,.22)}
+.hero-copy>p{
+  color:#c0c0c0;max-width:720px;font-size:1.12rem;margin-bottom:34px;
+  animation:rise .9s .25s ease both
+}
+.buttons{display:flex;gap:13px;flex-wrap:wrap;animation:rise .9s .4s ease both}
+.btn{
+  min-height:51px;padding:14px 25px;border-radius:35px;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-weight:850;transition:.35s;border:1px solid transparent
+}
+.btn-primary{
+  background:var(--pink);color:#fff;
+  box-shadow:0 12px 35px rgba(231,45,130,.22)
+}
+.btn-primary:hover{transform:translateY(-4px);background:var(--pink2);box-shadow:0 18px 50px rgba(231,45,130,.32)}
+.btn-outline{border-color:rgba(255,255,255,.17)}
+.btn-outline:hover{border-color:var(--pink2);color:var(--pink2);transform:translateY(-4px)}
+
+.hero-art{
+  min-height:610px;display:grid;place-items:center;position:relative
+}
+.hero-art:before,.hero-art:after{
+  content:"";position:absolute;border-radius:50%;
+  border:1px solid rgba(231,45,130,.2);
+  animation:spin 14s linear infinite
+}
+.hero-art:before{width:540px;height:540px}
+.hero-art:after{width:420px;height:420px;animation-direction:reverse;animation-duration:10s}
+.pink-orb{
+  width:450px;height:450px;border-radius:50%;
+  background:
+    radial-gradient(circle at 35% 28%,rgba(255,255,255,.16),transparent 15%),
+    radial-gradient(circle,rgba(231,45,130,.88),rgba(116,5,56,.9) 60%,#19020d 100%);
+  box-shadow:0 0 100px rgba(231,45,130,.25),inset 0 0 55px rgba(0,0,0,.35);
+  position:relative;z-index:2;
+  animation:float 5s ease-in-out infinite
+}
+.floating-logo{
+  position:absolute;z-index:3;width:410px;
+  filter:drop-shadow(0 20px 30px rgba(0,0,0,.65));
+  animation:floatLogo 5s 0.3s ease-in-out infinite
+}
+.hero-tag{
+  position:absolute;z-index:5;padding:10px 14px;
+  border:1px solid rgba(231,45,130,.28);background:rgba(8,8,8,.8);
+  backdrop-filter:blur(12px);border-radius:30px;font-size:.72rem;font-weight:800;
+  box-shadow:0 0 30px rgba(231,45,130,.1)
+}
+.tag1{top:11%;right:1%;animation:float 4s infinite}
+.tag2{bottom:13%;left:0;animation:float 4.7s .5s infinite}
+.tag3{top:31%;left:-3%;animation:float 5s 1s infinite}
+
+/* STATS */
+.stats{background:#070707;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.stat{padding:34px 28px;border-right:1px solid var(--line)}
+.stat:last-child{border:0}
+.stat strong{display:block;color:var(--pink2);font-size:2.25rem;line-height:1;margin-bottom:7px}
+.stat span{color:var(--muted);font-size:.9rem}
+
+/* ABOUT */
+.about{background:linear-gradient(180deg,#080808,#030303)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about h2,.services h2,.why h2{
+  font-size:clamp(2.35rem,5vw,4.35rem);line-height:1.02;letter-spacing:-2px;margin-bottom:21px
+}
+.about p{color:var(--muted);margin-bottom:17px}
+.quote{
+  margin-top:28px;padding:23px;border-left:3px solid var(--pink);
+  background:linear-gradient(90deg,rgba(231,45,130,.08),transparent);
+  border-radius:0 18px 18px 0
+}
+.quote strong{display:block;font-size:1.1rem;margin-bottom:4px}
+.quote span{color:#929292}
+.about-visual{min-height:480px;position:relative;display:grid;place-items:center}
+.about-visual:before{
+  content:"";position:absolute;width:390px;height:390px;border-radius:50%;
+  background:radial-gradient(circle,rgba(231,45,130,.15),transparent 68%);
+  animation:glow 3s infinite
+}
+.about-logo{width:330px;position:relative;filter:drop-shadow(0 20px 35px #000);animation:float 6s infinite}
+.mini-card{
+  position:absolute;right:0;bottom:35px;padding:17px 20px;
+  border:1px solid rgba(231,45,130,.25);background:rgba(15,15,15,.82);
+  backdrop-filter:blur(13px);border-radius:17px
+}
+.mini-card b{display:block;color:var(--pink2);font-size:1.3rem}
+.mini-card small{color:#aaa}
+
+/* SERVICES */
+.services{background:#050505}
+.service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
+.service-card{
+  padding:39px;border-radius:26px;background:linear-gradient(145deg,#151515,#090909);
+  border:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden;
+  transition:.4s
+}
+.service-card:before{
+  content:"";position:absolute;width:230px;height:230px;border-radius:50%;
+  background:rgba(231,45,130,.06);right:-120px;top:-120px;transition:.5s
+}
+.service-card:hover{
+  transform:translateY(-10px);
+  border-color:rgba(231,45,130,.4);
+  box-shadow:0 25px 65px rgba(0,0,0,.5)
+}
+.service-card:hover:before{transform:scale(1.4)}
+.service-num{color:var(--pink2);font-weight:900;letter-spacing:3px;font-size:.75rem;margin-bottom:18px}
+.service-card h3{font-size:2rem;line-height:1.06;margin-bottom:14px}
+.service-card>p{color:var(--muted);margin-bottom:25px}
+.service-list{list-style:none}
+.service-list li{
+  padding:14px 0;border-top:1px solid var(--line);color:#ccc;font-size:.91rem
+}
+.service-list li:before{content:"→";color:var(--pink2);font-weight:900;margin-right:10px}
+.service-list strong{color:#fff}
+
+/* WHY */
+.why{background:#080808}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.why-card{
+  padding:29px 24px;background:#101010;border:1px solid var(--line);
+  border-radius:20px;transition:.4s
+}
+.why-card:hover{transform:translateY(-8px);border-color:rgba(231,45,130,.35);box-shadow:0 0 40px rgba(231,45,130,.11)}
+.icon{
+  width:48px;height:48px;display:grid;place-items:center;border-radius:14px;
+  background:rgba(231,45,130,.09);color:var(--pink2);font-weight:900;margin-bottom:18px
+}
+.why-card h3{font-size:1.18rem;margin-bottom:8px}
+.why-card p{color:var(--muted);font-size:.9rem}
+
+/* TARGET */
+.target{
+  text-align:center;
+  background:radial-gradient(circle at 50% 45%,rgba(231,45,130,.14),transparent 35%),#030303
+}
+.target h2{font-size:clamp(2.6rem,6vw,5.3rem);line-height:.98;max-width:900px;margin:0 auto 22px}
+.target h2 span{color:var(--pink2)}
+.target p{color:var(--muted);max-width:720px;margin:0 auto 30px}
+
+/* CONTACT */
+.contact{background:#090909}
+.contact-grid{display:grid;grid-template-columns:.86fr 1.14fr;gap:55px;align-items:start}
+.contact h2{font-size:clamp(2.5rem,5vw,4.2rem);line-height:1;margin-bottom:20px}
+.contact-info>p{color:var(--muted);margin-bottom:23px}
+.contact-list{list-style:none}
+.contact-list li{
+  display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)
+}
+.contact-icon{
+  width:36px;height:36px;flex:none;display:grid;place-items:center;
+  border-radius:10px;background:rgba(231,45,130,.09);color:var(--pink2);font-weight:900
+}
+.contact-list small{display:block;color:#777}
+.contact-list a{font-weight:750;word-break:break-word}
+.contact-list a:hover{color:var(--pink2)}
+.socials{display:flex;gap:9px;flex-wrap:wrap;margin-top:24px}
+.socials a{
+  border:1px solid var(--line);border-radius:25px;padding:9px 12px;
+  color:#bbb;font-size:.77rem;font-weight:750;transition:.3s
+}
+.socials a:hover{border-color:var(--pink2);color:var(--pink2);transform:translateY(-3px)}
+.form{
+  padding:35px;background:#101010;border:1px solid var(--line);
+  border-radius:26px;box-shadow:0 25px 70px rgba(0,0,0,.35)
+}
+.field{margin-bottom:18px}
+.field label{display:block;color:#ccc;font-size:.82rem;font-weight:700;margin-bottom:7px}
+.field input,.field select,.field textarea{
+  width:100%;background:#070707;color:#fff;border:1px solid rgba(255,255,255,.1);
+  border-radius:12px;padding:14px 15px;outline:none;transition:.3s
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  border-color:var(--pink2);box-shadow:0 0 0 3px rgba(231,45,130,.07)
+}
+.field textarea{min-height:135px;resize:vertical}
+.submit{width:100%;border:0;cursor:pointer}
+
+/* FOOTER */
+footer{background:#020202;border-top:1px solid var(--line);padding:40px 0 24px}
+.footer-top{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-bottom:28px}
+.footer-logo{width:185px;height:62px;object-fit:contain;object-position:left center}
+.footer-links{display:flex;gap:22px;flex-wrap:wrap}
+.footer-links a{color:#858585;font-size:.84rem;transition:.3s}
+.footer-links a:hover{color:var(--pink2)}
+.copy{border-top:1px solid var(--line);padding-top:17px;color:#666;font-size:.77rem}
+
+/* ANIMATIONS */
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes drop{from{opacity:0;transform:translateY(-18px)}to{opacity:1;transform:none}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+@keyframes floatLogo{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-13px) rotate(1deg)}}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.45);opacity:.55}}
+@keyframes glow{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* RESPONSIVE */
+@media(max-width:1050px){
+  .navlinks{gap:17px}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-copy{text-align:center}
+  .hero-copy>p{margin-left:auto;margin-right:auto}
+  .buttons{justify-content:center}
+  .hero-art{min-height:500px}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:800px){
+  .nav{height:82px}
+  .company-logo{width:180px;height:72px}
+  .menu{display:block}
+  .navlinks{
+    display:none;position:absolute;top:82px;left:0;width:100%;
+    padding:24px;background:#080808;border-bottom:1px solid var(--line);
+    flex-direction:column;align-items:flex-start
+  }
+  .navlinks.open{display:flex}
+  .stats-grid,.service-grid{grid-template-columns:1fr}
+  .stat{border-right:0;border-bottom:1px solid var(--line)}
+  .footer-top{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:560px){
+  .section{padding:78px 0}
+  .hero{padding-top:105px}
+  .hero h1{font-size:3.25rem;letter-spacing:-3px}
+  .hero-art{min-height:385px}
+  .pink-orb{width:300px;height:300px}
+  .floating-logo{width:285px}
+  .hero-art:before{width:350px;height:350px}
+  .hero-art:after{width:270px;height:270px}
+  .hero-tag{font-size:.64rem;padding:8px 10px}
+  .tag1{right:0}.tag2{left:0}.tag3{left:0;top:18%}
+  .why-grid{grid-template-columns:1fr}
+  .service-card,.form{padding:27px}
+  .about-visual{min-height:390px}
+  .about-logo{width:280px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#home" aria-label="Yolanda Services home">
+      <img class="company-logo" src="yolanda-company-logo.png" alt="Yolanda Services">
+    </a>
+
+    <button class="menu" id="menuBtn" aria-label="Open navigation">☰</button>
+
+    <ul class="navlinks" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why">Why Yolanda</a></li>
+      <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-badge"><i></i> Excellence. Experience. Impact.</div>
+      <h1>Two Crafts.<br><span>One Standard.</span></h1>
+      <p>
+        Yolanda Services runs the conversations that keep a business reachable,
+        and the tables that keep a room remembered. From customer support and
+        call centers to celebrations, catering, hospitality, sales and
+        Espee-to-Naira exchange, we build the operations behind the moments
+        that matter.
+      </p>
+      <div class="buttons">
+        <a href="#services" class="btn btn-primary">Explore Our Services →</a>
+        <a href="#contact" class="btn btn-outline">Talk to Us</a>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <div class="pink-orb"></div>
+      <img class="floating-logo" src="yolanda-floating-logo.png" alt="Yolanda Rhapsody App Assistant">
+      <div class="hero-tag tag1">☎ Customer Support</div>
+      <div class="hero-tag tag2">✦ Hospitality & Events</div>
+      <div class="hero-tag tag3">↔ Espee → Naira</div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat reveal"><strong>$1M+</strong><span>Income-generation target across our service portfolio</span></div>
+    <div class="stat reveal"><strong>02</strong><span>Core service lines under one standard of operation</span></div>
+    <div class="stat reveal"><strong>360°</strong><span>End-to-end setup and operational support</span></div>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="container about-grid">
+    <div class="reveal">
+      <div class="label">About Yolanda Services</div>
+      <h2>We build the <span class="pink">operations</span> behind the moments that matter.</h2>
+      <p>Yolanda Services operates across two disciplines that share the same DNA: clear communication and flawless delivery.</p>
+      <p>We help businesses establish customer communication systems, manage outreach, organize events, deliver large-scale catering, support hospitality operations, provide sales support and facilitate Espee-to-Naira exchange.</p>
+      <p>We don't hand you a template and walk away. We set up the system, provide the operational support and stay on it.</p>
+      <div class="quote">
+        <strong>One team. Two disciplines. One standard.</strong>
+        <span>Clear communication, reliable execution and professional service.</span>
+      </div>
+    </div>
+
+    <div class="about-visual reveal">
+      <img class="about-logo" src="yolanda-company-logo.png" alt="Yolanda Services logo">
+      <div class="mini-card"><b>Excellence.</b><small>Experience. Impact.</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="section services" id="services">
+  <div class="container">
+    <div class="reveal">
+      <div class="label">What We Do</div>
+      <h2>Built to run your <span class="pink">customer line</span> and your guest list.</h2>
+      <p style="color:var(--muted);max-width:750px;margin-bottom:55px">
+        Whichever line you engage us for, we set up the system and work with you to run it.
+        Our services are built around clear communication, reliable delivery and measurable outcomes.
+      </p>
+    </div>
+
+    <div class="service-grid">
+      <article class="service-card reveal">
+        <div class="service-num">LINE ONE / 01</div>
+        <h3>Customer Support & Call Center Solutions</h3>
+        <p>We set up and run the communication infrastructure that keeps you connected to every customer, at scale.</p>
+        <ul class="service-list">
+          <li><strong>Call Center Setup</strong> — from floor planning and infrastructure to live agents, built for your volume.</li>
+          <li><strong>Bulk Calling Support</strong> — structured outreach to reach large customer lists efficiently.</li>
+          <li><strong>Automated Calls</strong> — reminders, alerts, notifications and routine customer outreach.</li>
+          <li><strong>Bulk SMS Campaigns</strong> — fast, direct communication for updates, promotions and engagement.</li>
+          <li><strong>Customer Support Desk</strong> — trained support teams ready to represent your brand professionally.</li>
+        </ul>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-num">LINE TWO / 02</div>
+        <h3>Catering, Hospitality & Sales</h3>
+        <p>We plan, cook and manage the experiences your guests remember — and the sales that support them.</p>
+        <ul class="service-list">
+          <li><strong>Event Management & Setup</strong> — planning, coordination, setup and execution.</li>
+          <li><strong>Crowd Meals</strong> — catering built to serve large gatherings without compromising delivery.</li>
+          <li><strong>Hospitality Support</strong> — organized guest-facing service built around experience.</li>
+          <li><strong>Sales Support</strong> — operational support for customer-facing sales activities.</li>
+          <li><strong>Espee-to-Naira Exchange</strong> — exchange services handled with clear communication and efficient processing.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section why" id="why">
+  <div class="container">
+    <div class="reveal">
+      <div class="label">Why Yolanda</div>
+      <h2>One team. <span class="pink">No gaps.</span></h2>
+      <p style="color:var(--muted);max-width:720px;margin-bottom:50px">
+        We focus on the complete operation — not just one piece of the job.
+      </p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="icon">01</div><h3>End-to-End Setup</h3><p>From call center infrastructure to event floor plans, we build the whole system, not just a piece of it.</p></div>
+      <div class="why-card reveal"><div class="icon">02</div><h3>Scale on Demand</h3><p>Bulk calls, bulk SMS and crowd meals are built for volume — whether that means thousands of customers or hundreds of guests.</p></div>
+      <div class="why-card reveal"><div class="icon">03</div><h3>Two Teams, One Standard</h3><p>Our support and hospitality lines run on the same principles: be clear, be reliable and be there.</p></div>
+      <div class="why-card reveal"><div class="icon">04</div><h3>Growth-Minded</h3><p>Every engagement is built toward measurable outcomes, customer satisfaction, operational efficiency and growth.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section target">
+  <div class="container reveal">
+    <div class="label">Our Vision</div>
+    <h2>Building better operations.<br><span>Creating bigger opportunities.</span></h2>
+    <p>
+      Our ambition is to build dependable systems that help businesses communicate better,
+      serve better and grow sustainably — while working toward our $1M income-generation target.
+    </p>
+    <a href="#contact" class="btn btn-primary">Start a Conversation →</a>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="container contact-grid">
+
+    <div class="contact-info reveal">
+      <div class="label">Get In Touch</div>
+      <h2>Let's build something that <span class="pink">works.</span></h2>
+      <p>
+        Whether you need customer communication, a professionally managed event,
+        large-scale catering, hospitality and sales support, or Espee-to-Naira exchange,
+        Yolanda Services is ready to help.
+      </p>
+
+      <ul class="contact-list">
+        <li><div class="contact-icon">✉</div><div><small>Company Email</small><a href="mailto:yolandaservicescare@gmail.com">yolandaservicescare@gmail.com</a></div></li>
+        <li><div class="contact-icon">☎</div><div><small>Call Line</small><a href="tel:08128805199">08128805199</a></div></li>
+        <li><div class="contact-icon">K</div><div><small>KingsChat</small><a href="#">@Yolandaservices</a></div></li>
+        <li><div class="contact-icon">♪</div><div><small>TikTok</small><a href="#">@Yolandaservices</a></div></li>
+        <li><div class="contact-icon">𝕏</div><div><small>Twitter / X</small><a href="#">@Yolandaservices</a></div></li>
+      </ul>
+
+      <div class="socials">
+        <a href="mailto:yolandaservicescare@gmail.com">Email</a>
+        <a href="tel:08128805199">Call</a>
+        <a href="#services">Services</a>
+      </div>
+    </div>
+
+    <form class="form reveal" id="contactForm">
+      <div class="field"><label for="name">Full Name</label><input id="name" name="name" type="text" placeholder="Your name" required></div>
+      <div class="field"><label for="email">Email Address</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div>
+      <div class="field">
+        <label for="service">Service Needed</label>
+        <select id="service" name="service" required>
+          <option value="">Select a service</option>
+          <option>Call Center Setup</option>
+          <option>Customer Support Desk</option>
+          <option>Bulk Calling Support</option>
+          <option>Automated Calls</option>
+          <option>Bulk SMS Campaigns</option>
+          <option>Event Management & Setup</option>
+          <option>Crowd Meals / Catering</option>
+          <option>Hospitality Support</option>
+          <option>Sales Support</option>
+          <option>Espee-to-Naira Exchange</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field"><label for="message">Tell us about your request</label><textarea id="message" name="message" placeholder="Tell us what you need..." required></textarea></div>
+      <button class="btn btn-primary submit" type="submit">Send Message →</button>
+      <p id="formMessage" style="display:none;color:var(--pink2);text-align:center;font-weight:700;margin-top:14px"></p>
+    </form>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <img class="footer-logo" src="yolanda-company-logo.png" alt="Yolanda Services">
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#why">Why Yolanda</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="copy">© 2026 Yolanda Services. All rights reserved. | Excellence. Experience. Impact.</div>
+  </div>
+</footer>
+
+<script>
+const menuBtn=document.getElementById("menuBtn");
+const navLinks=document.getElementById("navLinks");
+menuBtn.addEventListener("click",()=>navLinks.classList.toggle("open"));
+
+document.querySelectorAll(".navlinks a").forEach(link=>{
+  link.addEventListener("click",()=>navLinks.classList.remove("open"));
+});
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting) entry.target.classList.add("show");
+  });
+},{threshold:.12});
+
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+document.querySelectorAll(".service-card").forEach(card=>{
+  card.addEventListener("mousemove",e=>{
+    if(window.innerWidth<900)return;
+    const r=card.getBoundingClientRect();
+    const x=(e.clientX-r.left)/r.width-.5;
+    const y=(e.clientY-r.top)/r.height-.5;
+    card.style.transform=`translateY(-10px) perspective(900px) rotateY(${x*4}deg) rotateX(${y*-4}deg)`;
+  });
+  card.addEventListener("mouseleave",()=>card.style.transform="");
+});
+
+document.getElementById("contactForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const msg=document.getElementById("formMessage");
+  const btn=e.target.querySelector(".submit");
+  btn.textContent="Message Prepared ✓";
+  msg.textContent="Thank you. Your enquiry has been received.";
+  msg.style.display="block";
+});
+</script>
+
+</body>
+</html>
